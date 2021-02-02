@@ -71,13 +71,13 @@
 	          <form action="board_view.html" name="reply_form" method="post">
 	          <div class="card-body">
 	          	<div class="form-group">
-                   <label for="replyer">Writer</label>
-                   <input type="text" value="${session_username}"class="form-control" name="replyer" id="replyer" placeholder="작성자를 입력해 주세요." required>
+                   <label for="replyer" style="float:left;">Writer</label>
+                   <input type="text" value="${session_username}" class="form-control" name="replyer" id="replyer" placeholder="작성자를 입력해 주세요." required>
                    <!-- 폼에서 input같은 입력태그에는 name속성이 반드시 필요, 이유는 DB에 입력할때,
                    	 값을 전송하게 되는데, 전송값을 담아두는 이름이 name가 되고, 위에서는 writer 입니다. -->
                 </div>
                 <div class="form-group">
-                   <label for="reply_text">Reply Text</label>
+                   <label for="reply_text" style="float:left;">Reply Text</label>
                    <input type="text" class="form-control" name="reply_text" id="reply_text" placeholder="내용을 입력해 주세요." required>
                    <!-- 아래 게시판에서는 폼을 전송할때 submit 타입을 사용 하지만, 댓글은 Ajax로 전송하기 때문에, button타입으로 지정함. -->
                 </div>
