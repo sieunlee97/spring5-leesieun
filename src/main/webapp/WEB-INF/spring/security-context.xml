@@ -31,7 +31,7 @@
 		username-parameter="user_id"
 		password-parameter="user_pw"
 	/>
-	<security:remember-me key="remember-key" token-validity-seconds="604800" remember-me-parameter="rember-me-parameter"/>
+	<security:remember-me key="remember-key" token-validity-seconds="604800" remember-me-parameter="remember-me-parameter"/>
 	<security:logout logout-url="/logout" logout-success-url="/" invalidate-session="true" 
 	delete-cookies="JSESSIONID,SPRING_SECURITY_REMEMBER_ME_COOKIE"/>
 </security:http>
