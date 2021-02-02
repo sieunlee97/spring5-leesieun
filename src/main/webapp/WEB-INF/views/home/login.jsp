@@ -5,6 +5,9 @@
 <%@ include file="include/header.jsp" %>
 <link rel="stylesheet" href="/resources/home/css/board.css">
 <script>
+if("${naver_msg}"== "fail"){
+	alert("네이버아이디로그인에 실패했습니다.");
+}
 if("${param.msg}" == "fail"){
 	alert('로그인에 실패했습니다. 상세메세지 : ${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}' );
 	//스프링 시큐리티는 세션을 발생시킨다. 위 자바 변수 중 세션 스코프는 세션영역을 말한다.
