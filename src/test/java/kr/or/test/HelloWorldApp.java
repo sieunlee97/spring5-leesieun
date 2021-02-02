@@ -14,6 +14,8 @@ public class HelloWorldApp {
 		for(int cnt=0;cnt<=10;cnt++) {
 			Calendar cal = Calendar.getInstance();
 			cal.setTime(reg_date);
+			cal.add(Calendar.SECOND, cnt); //cnt초 더하기
+			System.out.println(format.format(cal.getTime()));
 		}
 		
 		System.out.println("헬로우 월드!");
