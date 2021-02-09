@@ -20,5 +20,8 @@ public interface IF_MemberService {
 	public void updateMember(MemberVO memberVO) throws Exception;
 	public void insertMember(MemberVO memberVO) throws Exception;
 	public void herokuJobMethod() throws Exception;
+	
+	//6개월동안 회원정보 수정이 없는 사용자 목록 출력
+	public void testJob() throws Exception;
 }
 

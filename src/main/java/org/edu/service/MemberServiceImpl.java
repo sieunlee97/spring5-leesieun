@@ -75,5 +75,16 @@ public class MemberServiceImpl implements IF_MemberService {
 			System.out.println("해로쿠 앱이 활성화되지 않았습니다.");
 		}
 	}
+
+	@Override
+	public void testJob() throws Exception {
+		// DAO 호출해서 반환값으로 회원 목록을 받는다.(아래)
+		List<MemberVO> memberList = memberDAO.testJob();
+		System.out.println("6개월 동안 회원정보 수정이 없는 회원 목록 (아래)");
+		for(MemberVO memberVO : memberList) {
+			System.out.println(memberVO.getUser_id()+":"+memberVO.getEmail());
+		}
+		
+	}
 	
 }
