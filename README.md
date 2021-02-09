@@ -28,7 +28,8 @@
 - [X] 헤로쿠 클라우드로 배포(Hsql데이터베이스사용).
 - [X] 사용자단 CRUD 구현.
 - [X] 이후 유효성검사, 파스타클라우드, 네이버아이디 로그인(네이버에서 제공Rest-API백엔드단) 사용 등등. pom.xml 의존성 추가.
-- [ ] 오라클로 마이그레이션 작업.
+- [X] 오라클로 마이그레이션 작업.
+- [X] 스프링 5.X버전으로 업그레이드 
 
 ### 오라클로 마이그레이션
 - 수정1. now() -> sysdate
@@ -37,8 +38,46 @@
 - 수정4. <부등호 들어있는 쿼리 : <![CDATA[ 부등호가 있는 쿼리 ]]>
 - 수정5.  insert의 AI(자동증가) 부분 처리 : 마이바티스의 selectKey태그를 이용해서 시퀀스 처리
 
+## v7.0.0 SQL활용
+### 20210208(월)
+- 쿼리에서 TOP 5개 구하기 : MS-SQL(TOP 5), MYSQL(LIMIT 5), Oracle(ROWNUM)
+
+```
+SELECT ROWNUM AS TB_RNUM, TB.* FROM (
+    SELECT ROWNUM AS TA_RNUM, TA.* FROM TBL_MEMBER TA
+    ORDER BY REG_DATE DESC
+) TB
+WHERE ROWNUM <= 5;
+-- TOP5를 구하는 위는 확인용 쿼리 아래는 실제 작업시 사용하는 쿼리
+SELECT * FROM (
+    SELECT * FROM TBL_MEMBER
+    ORDER BY REG_DATE DESC
+) TA
+WHERE ROWNUM <= 5;
+```
+- 제약조건 : 프론트엔드단(required), 백엔드단(@NotNull), DB단(NotNull)
+- NotNull, Unique 모두 Primary Key로 지정 시 자동으로 적용됨
+
+- Grant(권한부여하는명령어)<->Revoke(권한제거명령어), Privileges(권한에관련된명령)
+- GRANT예:  GRANT SELECT ON EMP TO XE;
+- REVOKE예: REVOKE SELECT ON EMP FROM XE;
+- 인덱스: B-TREE알고리즘(자료구조과목): 정렬된 인덱스를 이용한 검색방법.
+
+- 시퀀스(AI역할)-자동번호발생기, 동의어(시노님)-테이블호출명이 길 때, ㅂㅂ
+
+### 20210203(수)
+- 용어1 뷰테이블 : 실제 물리적인 테이블이 아니다.(실제 데이터가 저장되는 공간은 아님)
+
+```
+SELECT TA.bno, TA.title, TA.writer, TA.reg_date, TA.view_count, COUNT(TB.rno) AS 댓글개수 FROM 
+TBL_BOARD TA INNER JOIN TBL_REPLY TB
+ON TA.bno = TB.bno
+GROUP BY TA.bno, TA.title, TA.writer, TA.reg_date, TA.view_count
+HAVING COUNT(TB.rno) > 1
+```
+
 ## v6.0.0 UI구현
-### 20210203(화)
+### 20210202(화)
 - scope(모듈이 사용되는 영역) 1:
 - provided
 - scope(모듈이 사용되는 영역) 2:
