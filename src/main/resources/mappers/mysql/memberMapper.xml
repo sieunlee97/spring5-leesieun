@@ -92,6 +92,12 @@ DELETE FROM tbl_member WHERE user_id=#{user_id}
 SELECT * FROM tbl_member WHERE user_id=#{user_id}
 </select>
 
+<select id="testJob" resultType="org.edu.vo.MemberVO">
+<![CDATA[ 
+SELECT * FROM tbl_member 
+WHERE update_date < DATE_ADD(now(),INTERVL-6 MONTH)
+]]>
 
+</select>
 
 </mapper>
