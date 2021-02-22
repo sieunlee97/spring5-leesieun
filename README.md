@@ -1,3 +1,20 @@
+### 사용자단
+
+<img src="file:///C:/Users/sieunlee/Desktop/home.index.PNG" style="width:500px; margin-right:10px; margin-bottom:10px;">
+<img src="file:///C:/Users/sieunlee/Desktop/마이페이지.PNG" style="width:500px; margin-right:10px; margin-bottom:10px;">
+<img src="file:///C:/Users/sieunlee/Desktop/join.PNG" style="width:500px; margin-right:10px; margin-bottom:10px;">
+<img src="file:///C:/Users/sieunlee/Desktop/로그인.PNG" style="width:500px; margin-right:10px; margin-bottom:10px;">
+<img src="file:///C:/Users/sieunlee/Desktop/게시판.PNG" style="width:500px; margin-right:10px; margin-bottom:10px;">
+
+### 관리자단
+
+<img src="file:///C:/Users/sieunlee/Desktop/관리자단.PNG" style="width:500px; margin-right:10px; margin-bottom:10px;">
+<img src="file:///C:/Users/sieunlee/Desktop/게시판타입.PNG" style="width:500px; margin-right:10px; margin-bottom:10px;">
+<img src="file:///C:/Users/sieunlee/Desktop/게시판리스트.PNG" style="width:500px; margin-right:10px; margin-bottom:10px;">
+<img src="file:///C:/Users/sieunlee/Desktop/회원관리.PNG" style="width:500px; margin-right:10px; margin-bottom:10px;">
+
+
+
 ##  스프링 작업 순서
 - [X] 스프링  HelloWorld MVC 프로젝트 org.edu.controller 제작 OK
 - [X] 스프링 HelloWorld MVC 프로젝트 edu.org.controller 제작OK.
