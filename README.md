@@ -1,3 +1,7 @@
+# 스프링5.x용 MVC 웹 프로젝트
+
+
+
 ##  스프링 작업 순서
 - [X] 스프링  HelloWorld MVC 프로젝트 org.edu.controller 제작 OK
 - [X] 스프링 HelloWorld MVC 프로젝트 edu.org.controller 제작OK.
@@ -74,6 +78,7 @@ WHERE ROWNUM <= 5;
 - 뷰테이블 필요성 : 사용자 요구사항에 맞추기 위해, 보안 - 노출할 정보를 제한 가능함.
 - > 다른 개발자, 다른 이용자에게 숨겨야 할 정보를 제외하고 자료를 공개할 떄, TBL_MEMBER 테이블을 공개하지 않고, 필드를 삭제한 VIEW_MEMBER_INFO라는 뷰테이블을 생성해서 제공하는 목적.
 - 위 제한된 정보만 가지고, 외부 개발자가 REST-API 화면 만든다.
+
 ```
 SELECT TA.bno, TA.title, TA.writer, TA.reg_date, TA.view_count, COUNT(TB.rno) AS 댓글개수 FROM 
 TBL_BOARD TA INNER JOIN TBL_REPLY TB
