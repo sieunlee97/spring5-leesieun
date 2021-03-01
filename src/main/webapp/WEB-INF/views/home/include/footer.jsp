@@ -7,10 +7,10 @@
 				<li><a href="javascript:;">이용약관</a></li>
 				<li><a href="javascript:;">개인정보취급방침</a></li>
 			</ul>
-			<h2>스프링</h2>
-            <p class="addr">OOOO OOOOO OOOO OOOOOOOOO OOOOO <span class="gubun">/</span>        
-				<span class="br_line">대표전화 <span class="space0">02-1234-5678</span> <span class="gubun">/</span>        
-					<span class="br_line">E-mail : <span class="space0"> admin@OOOO OOOOO.com</span></span>
+			<h2>스프링5 프로젝트</h2>
+            <p class="addr">스프링5 게시판 프로젝트 <span class="gubun">/</span>        
+				<span class="br_line">대표전화 <span class="space0">-</span> <span class="gubun">/</span>        
+					<span class="br_line">E-mail : <span class="space0">tldms0137@naver.com</span></span>
 				</span>
 			</p>
 			<p class="copy box_inner">Copyright(c) OOOO OOOOO all right reserved</p>
