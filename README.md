@@ -67,7 +67,13 @@ WHERE ROWNUM <= 5;
 
 ### 20210203(수)
 - 용어1 뷰테이블 : 실제 물리적인 테이블이 아니다.(실제 데이터가 저장되는 공간은 아님)
-
+- > 뷰테이블은 DB를 조작해서 화면에 가상테이블로 출력하는 기능. 
+- > EX) 게시물별(부모 TBL_BOARD) 댓글(자식 TBL_REPLY) 갯수 구하는 쿼리
+- 게시물에 댓글이 달린 게시물 출력(기본). 테이블조인 사용(교집합 개념)
+- 위 출력물에서 댓글 개수를 추가로 출력(카운터). GROUP BY 해서 COUNT() 사용
+- 뷰테이블 필요성 : 사용자 요구사항에 맞추기 위해, 보안 - 노출할 정보를 제한 가능함.
+- > 다른 개발자, 다른 이용자에게 숨겨야 할 정보를 제외하고 자료를 공개할 떄, TBL_MEMBER 테이블을 공개하지 않고, 필드를 삭제한 VIEW_MEMBER_INFO라는 뷰테이블을 생성해서 제공하는 목적.
+- 위 제한된 정보만 가지고, 외부 개발자가 REST-API 화면 만든다.
 ```
 SELECT TA.bno, TA.title, TA.writer, TA.reg_date, TA.view_count, COUNT(TB.rno) AS 댓글개수 FROM 
 TBL_BOARD TA INNER JOIN TBL_REPLY TB
@@ -75,14 +81,26 @@ ON TA.bno = TB.bno
 GROUP BY TA.bno, TA.title, TA.writer, TA.reg_date, TA.view_count
 HAVING COUNT(TB.rno) > 1
 ```
+- 용어2 테이블조인 : 
+
+```
+-- 게시물에 달린 첨부파일 개수를 구하기
+SELECT TA.BNO,TA.TITLE,TA.REG_DATE, COUNT(TB.REAL_FILE_NAME) AS 첨부파일개수
+FROM TBL_BOARD TA INNER JOIN TBL_ATTACH TB
+ON TA.BNO = TB.BNO
+GROUP BY TA.BNO,TA.TITLE,TA.REG_DATE -- 그룹으로 묶어주면 3줄이 2줄로 변경
+HAVING COUNT(TB.REAL_FILE_NAME) >= 2 -- 그룹의 해빙 조건절
+;
+```
 
 ## v6.0.0 UI구현
 ### 20210202(화)
 - scope(모듈이 사용되는 영역) 1:
-- provided
+- provided - 메모리 기준 : 톰캣 실행 시, jar모듈이 메모리에 로딩 = 인스턴스 생성
 - scope(모듈이 사용되는 영역) 2:
-- runtime
+- runtime - 메모리 기준 : 톰캣 실행 시 메모리에 로딩 X, 해당 기능이 실행(runtime)시, 메모리에 로딩 = 인스턴스 생성
 - scope(모듈이 사용되는 영역) 3:
+- test - 메모리 기준 : 톰캣 실행 시 메모리에 로딩 X, 웹 프로그램 기능에서 실행 X, @Test시에만 메모리에 리딩 = 인스턴스 생성
 
 
 ### 20210201(월)
