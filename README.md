@@ -1,5 +1,13 @@
 # 스프링5.x용 MVC 웹 프로젝트
 
+###  사용자단 홈페이지
+- **기능** : 게시물 CRUD / 회원가입, 마이페이지 / 로그인, 네이버아이디로그인
+<img width="50%" src="https://user-images.githubusercontent.com/63999784/109473719-0667c580-7ab7-11eb-9007-e7484cad2686.PNG">
+<img width="50%" src="https://user-images.githubusercontent.com/63999784/109473916-44fd8000-7ab7-11eb-9254-dd131ad5e51e.PNG">
+<img width="50%" src="https://user-images.githubusercontent.com/63999784/109473892-3fa03580-7ab7-11eb-976e-f35f1f5acfd8.PNG">
+
+###  관리자단 홈페이지
+- **기능** : 회원관리(회원보기, 등록, 수정, 삭제) / 게시물관리(게시판타입 CRUD, 게시판 CRUD)
 
 
 ##  스프링 작업 순서
