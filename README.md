@@ -5,7 +5,14 @@
 - (회원/게시물) 검색 기능
 
 ###  사용자단 홈페이지
+- **메인화면** : 게시물 미리보기 기능.
+<div>
+<img width="48%" align="left" src="https://user-images.githubusercontent.com/63999784/110214340-79be6c80-7ee7-11eb-996c-c0963ad2c4c1.png">
+<img width="48%" src="https://user-images.githubusercontent.com/63999784/110214252-1c2a2000-7ee7-11eb-958f-90b26a8ee437.png">
+</div>
+
 - **기능** : 게시물 CRUD / 회원가입, 마이페이지 / 로그인, 네이버아이디로그인
+
 **1. 게시물 CRUD** - 게시물 생성, 읽기, 수정, 삭제 가능. 전체+제목+내용으로 게시물 검색 가능
 - MySql, Oracle로 쿼리 생성.
 <div>
@@ -30,6 +37,7 @@
 ###  관리자단 홈페이지
 - AdminLTE 활용.
 - **기능** : 회원관리(회원보기, 등록, 수정, 삭제) / 게시물관리(게시판타입 CRUD, 게시물 CRUD)
+
 **1. 회원관리 CRUD** - 회원 생성, 읽기, 수정, 삭제 가능. 전체+아이디+이름으로 회원 검색 가능
 - MySql, Oracle로 쿼리 생성.
 - REST API 사용해 중복아이디 체크
