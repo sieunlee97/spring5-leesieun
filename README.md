@@ -1,13 +1,56 @@
 # 스프링5.x용 MVC 웹 프로젝트
+###  공통 기능
+- CRUD 기능
+- REST API 사용한 댓글 기능.
+- (회원/게시물) 검색 기능
 
 ###  사용자단 홈페이지
 - **기능** : 게시물 CRUD / 회원가입, 마이페이지 / 로그인, 네이버아이디로그인
-<img width="50%" src="https://user-images.githubusercontent.com/63999784/109473719-0667c580-7ab7-11eb-9007-e7484cad2686.PNG">
-<img width="50%" src="https://user-images.githubusercontent.com/63999784/109473916-44fd8000-7ab7-11eb-9254-dd131ad5e51e.PNG">
-<img width="50%" src="https://user-images.githubusercontent.com/63999784/109473892-3fa03580-7ab7-11eb-976e-f35f1f5acfd8.PNG">
+**1. 게시물 CRUD** - 게시물 생성, 읽기, 수정, 삭제 가능. 전체+제목+내용으로 게시물 검색 가능
+- MySql, Oracle로 쿼리 생성.
+<div>
+<img width="45%" align="left" src="https://user-images.githubusercontent.com/63999784/110213248-8ab8af00-7ee2-11eb-8249-7489fab4d3a0.png">
+<img width="45%" src="https://user-images.githubusercontent.com/63999784/110213280-ac199b00-7ee2-11eb-926d-162dbbcf7441.png">
+</div>
+
+**2. 회원가입, 마이페이지**
+- REST API 사용해 중복아이디 체크
+<div>
+<img width="45%" align="left" src="https://user-images.githubusercontent.com/63999784/110213314-d8351c00-7ee2-11eb-860b-b901345f4018.png">
+<img width="45%" src="https://user-images.githubusercontent.com/63999784/110213353-04509d00-7ee3-11eb-825a-cdd4a713ed43.png">
+</div>
+
+**3. 로그인, 네이버아이디 로그인**
+- Spirng Security 적용
+- 네이버 API 사용
+<div>
+<img width="45%" src="https://user-images.githubusercontent.com/63999784/110213379-25b18900-7ee3-11eb-8291-ba84622ad3b2.png">
+</div>
 
 ###  관리자단 홈페이지
-- **기능** : 회원관리(회원보기, 등록, 수정, 삭제) / 게시물관리(게시판타입 CRUD, 게시판 CRUD)
+- AdminLTE 활용.
+- **기능** : 회원관리(회원보기, 등록, 수정, 삭제) / 게시물관리(게시판타입 CRUD, 게시물 CRUD)
+**1. 회원관리 CRUD** - 회원 생성, 읽기, 수정, 삭제 가능. 전체+아이디+이름으로 회원 검색 가능
+- MySql, Oracle로 쿼리 생성.
+- REST API 사용해 중복아이디 체크
+<div>
+<img width="48%" align="left" src="https://user-images.githubusercontent.com/63999784/110213513-bd16dc00-7ee3-11eb-8228-19eb63af5cfe.png">
+<img width="48%" src="https://user-images.githubusercontent.com/63999784/110213545-e6376c80-7ee3-11eb-9ec7-3711e4498bc4.png">
+</div>
+
+**2.게시판타입 CRUD** - 게시판 타입 생성, 읽기, 수정, 삭제 가능
+- MySql, Oracle로 쿼리 생성.
+<div>
+<img width="48%" align="left" src="https://user-images.githubusercontent.com/63999784/110213638-30b8e900-7ee4-11eb-9fda-e737bf2fe4bd.png">
+<img width="48%" src="https://user-images.githubusercontent.com/63999784/110213728-96a57080-7ee4-11eb-9767-cc30a358975a.png">
+</div>
+
+**3.게시물 CRUD** - 게시물 생성, 읽기, 수정, 삭제 가능. 전체+제목+내용으로 게시물 검색 가능
+- MySql, Oracle로 쿼리 생성.
+<div>
+<img width="48%" align="left" src="https://user-images.githubusercontent.com/63999784/110213739-a9b84080-7ee4-11eb-914a-d7fd07370219.png">
+<img width="48%" src="https://user-images.githubusercontent.com/63999784/110213747-b2107b80-7ee4-11eb-9e64-e9d265d8686a.png">
+</div>
 
 
 ##  스프링 작업 순서
